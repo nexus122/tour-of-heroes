@@ -3,11 +3,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { MessagesComponent } from './messages/messages.component';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroesComponent, FormsModule, MessagesComponent, RouterLink],
+  imports: [RouterOutlet, HeroesComponent, FormsModule, MessagesComponent, RouterLink, UpperCasePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

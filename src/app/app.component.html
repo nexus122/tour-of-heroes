@@ -1,8 +1,17 @@
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-
-<h1>{{title}}</h1>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<div class="navbar bg-base-100">  
+  <a class="btn btn-ghost text-xl" routerLink="/dashboard">Dashboard</a>
+  <a class="btn btn-ghost text-xl" routerLink="/heroes">Heroes</a>
+</div>
+<section class="bg-white dark:bg-gray-900 ">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+    <h1 class="text-6xl mb-4">{{title | uppercase}}</h1>
+    <div class="flex flex-wrap">
+      <div class="w-1/2">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="w-1/2">
+        <app-messages></app-messages>
+      </div>
+    </div>
+  </div>
+</section>
